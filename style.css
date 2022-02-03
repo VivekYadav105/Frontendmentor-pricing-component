@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Montserrat:wght@500&display=swap');
+:root{
+    --full-slider:hsl(174, 77%, 80%);
+    --slider-background:hsl(174, 86%, 45%);
+    --light-font:hsl(225, 20%, 60%);
+    --discount-text: hsl(15, 100%, 70%);
+    --discount-background:hsl(14, 92%, 95%);
+    --pale-blue:hsl(226, 100%, 87%);
+    --main-background:hsl(230, 100%, 99%);
+    --button:hsl(227, 35%, 25%);
+    --empty-slider:hsl(224, 65%, 95%);
+    
+    font-family: 'Manrope',sans-serif;
+    font-size:15px;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url('images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw auto;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    max-height: 100vh;
+}
+section{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    max-height: 670px;
+}
+p{
+    font-size: 15px;
+    color: black;
+    text-shadow: none;
+}
+h1 span,.title p,#views>p,li>p{
+    font-size: 1rem;
+    color:var(--light-font);
+    font-weight: 300;
+}
+.top h1{
+    font-size:2.5rem;
+}
+.bottom,.middle,.top,.main{
+    display: flex;
+    align-items: center;
+}
+.title{
+    background-image: url("images/pattern-circles.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main{
+    background-color: var(--main-background);
+    padding:.5rem;
+    width: 650px;
+    max-height:400px;
+    height: 450px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px hsl(224, 65%, 95%);
+    position: relative;
+}
+.top,.middle,.bottom{
+    width: 90%;
+}
+.top{
+    justify-content: space-between;
+}
+.middle,#container{
+    flex-direction: column;
+}
+.seek{
+    width: 100%;
+    margin:20px;
+    position: relative;
+}
+#seek-bar{
+    width: 100%;
+    appearance: none;
+    height: 10px;
+    border-radius: 30px;
+    background-color: var(--empty-slider);
+    background-size: 0% 100%;
+}
+#progressbar{
+    background-color: var(--full-slider);
+    height: 10px;
+    width:100%;
+    display: inline-block;
+    position: absolute;
+    inset:50% 0% 0% 0%;
+    transform: translate(0%,-50%);
+    left: 2px;
+    border-radius: 10px;
+}
+#seek-bar::-webkit-slider-runnable-track{
+ appearance: none;
+}
+#seek-bar::-webkit-slider-thumb{
+    appearance: none;
+    background-color: var(--slider-background);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-shadow:2px 5px 2px var(--full-slider);
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+#billing{
+    display: none;
+}
+.slider-icon{
+    position: relative;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    border-radius:9px;
+    height: 20px;
+    border: 2px inset white;
+    background-color:var(--empty-slider)
+}
+#billing:checked+.slider-icon .ball{
+    transform: translateX(20px);
+    background-color: var(--discount-text);
+}
+.ball{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.3s;
+    left:1px;
+    background-color:var(--slider-background);
+}
+.button{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    right: 50px;
+}
+.button p{
+    display: inline-block;
+    color: var(--light-font);
+    padding: 2px;
+}
+.button span{
+    background-color: var(--discount-background);
+    color: var(--discount-text);
+    padding: 2px;
+    border-radius: 15px;
+    position: absolute;
+    right: -100px;
+    font-size: 12px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style-type:'\2713';
+    text-shadow: 1px 1px,2px 2px;
+    padding:0rem 1rem;
+    color: var(--slider-background);
+    font-weight: 800;
+    line-height: 0.5;
+}
+.button label+p{
+    position: relative;
+}
+.button label+p::after{
+    content: "25% discount";
+    position: absolute;
+    right:-100%;
+    top:0px;
+    background-color: var(--discount-background);
+    color: var(--discount-text);
+    padding: 4px 6px;
+    border-radius: 15px;
+}
+.bottom{
+    justify-content: space-between
+}
+button{
+    padding: .75rem 3rem;
+    color:var(--main-background);
+    background-color:var(--button);
+    font-size: 15px;
+    border-radius: 2rem;
+    transition: 0.3s;
+    font-weight: 300;
+    border: 0px none;
+    font-family: 'Manrope',sans-serif; 
+}
+button,input,label{
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: var(--button);
+    font-weight: 600;
+    border: 2px solid var(--button);
+    transform: scale(1.05);
+    box-shadow:0.5 0.75 var(--button);
+}
+@media screen and (min-width:320px) and (max-width:650px){
+    section{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        max-height: fit-content;
+        padding: 10px 0px 20px 0px;
+    }
+    .title{
+        margin: 0% 0% 0% 0%;
+        word-wrap: break-word;
+        padding: 0px 20px;
+    }
+    .title h1,.title p{
+        text-align: center;
+    }
+    .top{
+        width: 100%;
+        flex-direction: column;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        min-height: 500px;
+        margin: 10px;
+    }
+    .button label+p::after{
+        content: "-25%";
+        inset: initial;
+        right:25px;
+        top:25px
+    }
+    .button{
+        width: 100%;
+        inset: initial;
+        align-items: center;
+        justify-content: center;
+    }
+    .button p{
+        font-size: 12px;
+        padding:0px 10px;
+    }
+    .bottom{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50%;
+    }
+    .bottom .col,ul{
+        width: 100%;
+        text-align: center;
+    }
+    l1{
+        text-align: center;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+  <section id="container">
+    <div class="title">
+      <h1>Simple,traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trail.No credit card required.</p>
+    </div>
+    <div class="main">
+      <div class="top">
+        <div class="col" id="views">
+          <p><span>100k</span> PAGEVIEWS</p>
+        </div>
+        <div class="col" id="price">
+          <h1>$<strong>16.00</strong><span>/month</span></h1>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="seek">
+          <input type="range" id="seek-bar" value="16" min="0" max="36">
+          <div id="progressbar"></div>
+        </div>
+        <div class="button">
+          <p id="month">monthly billing</p>
+          <input type="checkbox" id="billing">
+          <label for="billing" class="slider-icon">
+            <div class="ball"></div>
+          </label>
+          <p id="year">Yearly planning</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="col">
+          <ul>
+            <li><p>Unlimited websites</p></li>
+            <li><p>100% data ownership</p></li>
+            <li><p>Email reports</p></li>
+          </ul>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn">Start my trial</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="price.js"></script>
+</body>
+</html>
