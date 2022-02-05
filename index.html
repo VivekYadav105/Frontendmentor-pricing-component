@@ -18,7 +18,7 @@
     <div class="main">
       
       <!-- views and prices -->
-      <div class="top">
+      <div class="top" role="pricing-view">
         <div class="col" id="views">
           <p><span>100k</span> PAGEVIEWS</p>
         </div>
@@ -28,23 +28,23 @@
       </div>
 
       <!-- range-input and slider button -->
-      <div class="middle" role="selection">
+      <div class="middle" role="plan-selection">
         <div class="seek">
           <label for="seek-bar"><input type="range" id="seek-bar" value="16" min="0" max="36"></label>
           <div id="progressbar"></div>
         </div>
-        <div class="button">
+        <div class="button" role="year-selection">
           <p id="month">monthly billing</p>
           <input type="checkbox" id="billing">
           <label for="billing" class="slider-icon">
-            <div class="ball"></div>
+            <span class="ball"></span>
           </label>
           <p id="year">Yearly planning</p>
         </div>
       </div>
 
     <!-- text and submit button -->
-      <div class="bottom" role="plan">
+      <div class="bottom" role="plan-benifits">
         <div class="col">
           <ul>
             <li><p>Unlimited websites</p></li>
