@@ -9,12 +9,15 @@
   <title>Frontend Mentor | Interactive pricing component</title>
 </head>
 <body>
+  <main>
   <section id="container">
-    <div class="title">
+    <header class="title" role="banner">
       <h1>Simple,traffic-based pricing</h1>
       <p>Sign-up for our 30-day trail.No credit card required.</p>
-    </div>
+    </header>
     <div class="main">
+      
+      <!-- views and prices -->
       <div class="top">
         <div class="col" id="views">
           <p><span>100k</span> PAGEVIEWS</p>
@@ -23,9 +26,11 @@
           <h1>$<strong>16.00</strong><span>/month</span></h1>
         </div>
       </div>
-      <div class="middle">
+
+      <!-- range-input and slider button -->
+      <div class="middle" role="selection">
         <div class="seek">
-          <input type="range" id="seek-bar" value="16" min="0" max="36">
+          <label for="seek-bar"><input type="range" id="seek-bar" value="16" min="0" max="36"></label>
           <div id="progressbar"></div>
         </div>
         <div class="button">
@@ -37,7 +42,9 @@
           <p id="year">Yearly planning</p>
         </div>
       </div>
-      <div class="bottom">
+
+    <!-- text and submit button -->
+      <div class="bottom" role="plan">
         <div class="col">
           <ul>
             <li><p>Unlimited websites</p></li>
@@ -51,6 +58,7 @@
       </div>
     </div>
   </section>
+</main>
   <script src="price.js"></script>
 </body>
 </html>

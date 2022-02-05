@@ -65,7 +65,7 @@ h1 span,.title p,#views>p,li>p{
     height: 450px;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 2px 2px 2px 2px hsl(224, 65%, 95%);
+    box-shadow: 2px 2px hsl(224, 65%, 95%);
     position: relative;
 }
 .top,.middle,.bottom{
@@ -202,6 +202,7 @@ button{
     font-size: 15px;
     border-radius: 2rem;
     transition: 0.3s;
+    border: 1px solid;
     font-weight: 300;
     border: 0px none;
     font-family: 'Manrope',sans-serif; 
@@ -246,6 +247,7 @@ button:hover{
         height: 100%;
         min-height: 500px;
         margin: 10px;
+        border-radius: 20px;
     }
     .button label+p::after{
         content: "-25%";
